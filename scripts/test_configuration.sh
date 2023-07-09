@@ -9,4 +9,3 @@ terraform workspace select ${ENVIRONMENT}
 export API_KEY=$(terraform output -raw service_account_token_management_key)
 
 bats test/validate_glc.bats
-

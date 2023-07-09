@@ -26,4 +26,3 @@ resource "grafana_cloud_stack_service_account_token" "management" {
   name               = var.sa_token_name
   service_account_id = grafana_cloud_stack_service_account.management.id
 }
-
