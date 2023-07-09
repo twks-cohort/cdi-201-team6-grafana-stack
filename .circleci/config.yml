@@ -107,6 +107,7 @@ workflows:
           shell: op run --env-file op.env -- /bin/bash -eo pipefail
           workspace: prod
           terraform-version: << pipeline.parameters.terraform-version >>
+          tfc-local-execution-mode: true
           tfc-organization: twks-cohort
           tfc-workspace-name: team6-201-grafana-stack-prod
           tfe-token: $TERRAFORM_CLOUD_TOKEN
