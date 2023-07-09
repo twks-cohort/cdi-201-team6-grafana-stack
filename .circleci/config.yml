@@ -2,7 +2,7 @@
 version: 2.1
 
 orbs:
-  terraform: twdps/terraform@0.6.0
+  terraform: twdps/terraform@0.15.0
   op: twdps/onepassword@1.0.0
 
 # ==== global pipeline parameters
@@ -107,6 +107,9 @@ workflows:
           shell: op run --env-file op.env -- /bin/bash -eo pipefail
           workspace: prod
           terraform-version: << pipeline.parameters.terraform-version >>
+          tfc-organization: twks-cohort
+          tfc-workspace-name: team6-201-grafana-stack-prod
+          tfe-token: $TERRAFORM_CLOUD_TOKEN
           before-terraform:
             - set-environment:
                 tenant: prod
