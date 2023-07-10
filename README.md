@@ -9,6 +9,6 @@
 
 ![bootstrap](https://img.shields.io/badge/document-EarlyDraft-yellow.svg?style=for-the-badge&logo=markdown)  
 
-This repository will setup a Grafana Stack for a CDI 201 Cohort team to use throughout the course in multiple phases.
+This repository will setup a Grafana Stack for [CDI 201 Cohort team 6](https://github.com/twks-cohort/cdi-201-team6-grafana-stack) to use throughout the course in multiple phases.
 
 Please refer to the weekly modules for exercise instructions each week.

@@ -26,3 +26,11 @@ resource "grafana_cloud_stack_service_account_token" "management" {
   name               = var.sa_token_name
   service_account_id = grafana_cloud_stack_service_account.management.id
 }
+
+# Create an API Key we can use to push metrics into the stack
+resource "grafana_cloud_api_key" "metrics_publisher" {
+  provider = grafana.admin
+  cloud_org_slug = var.org_name
+  name           = "publisher-key"
+  role           = "MetricsPublisher"
+}
